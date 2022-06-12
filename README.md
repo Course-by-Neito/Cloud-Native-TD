@@ -6,6 +6,7 @@
 - [Preparing the infrastructure](#preparing-the-infrastructure)
   - [Create a VM](#create-a-vm)
   - [Access and prepare the VM](#access-and-prepare-the-vm)
+    - [Attach VS Code to the VM](#attach-vs-code-to-the-vm)
     - [Allow HTTP traffic](#allow-http-traffic)
 - [Post course operations](#post-course-operations)
   - [Deactivate GCP billing](#deactivate-gcp-billing)
@@ -55,6 +56,8 @@ If you rather want to use Windows as a terminal and work environment, that's up 
 ## [Create a VM](chapters/create-vm.md)
 
 ## [Access and prepare the VM](chapters/accces-prepare-VM.md)
+
+### [Attach VS Code to the VM](chapters/remote-vscode.md)
 
 ### [Allow HTTP traffic](chapters/allow-http.md)
 
