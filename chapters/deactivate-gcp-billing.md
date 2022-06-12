@@ -7,7 +7,8 @@
 1. Type "Gestion des comptes" in the search bar to directly access the right page
     ![Gestion des comptes](./../images/gestion-des-comptes.jpg)
 2. On the upper options bar you the "Fermer le compte de facturation" option
-   - Follow the instruction and close billing
+   - Follow the instruction and close billing  
+   
     ![Fermer facturation](../images/cloture-compte-facturation.jpg)
 
 ## Remove credit card informations
