@@ -3,16 +3,24 @@
   - [Objectives of the exercise](#objectives-of-the-exercise)
 - [Useful Tools and preliminary steps](#useful-tools-and-preliminary-steps)
   - [Create a trash Gmail account and activate GCP trial period.](#create-a-trash-gmail-account-and-activate-gcp-trial-period)
+- [Preparing the infrastructure](#preparing-the-infrastructure)
+  - [Create a VM](#create-a-vm)
+  - [Access and prepare the VM](#access-and-prepare-the-vm)
+    - [Allow HTTP traffic](#allow-http-traffic)
+- [Post course operations](#post-course-operations)
+  - [Deactivate GCP billing](#deactivate-gcp-billing)
 
 # About this repo
 
-This repository contains the instructions to perfom the course given in June 2022 at CESI Nanterre.
+This repository contains the instructions to perform the course given in June 2022 at CESI Nanterre.
 
 ## Objectives of the exercise
 
 The objective is to support the introduction to the Cloud Native concept by practicing high level cloud notions and interacting with a CSP (Cloud Service/Solution Provider)
 
 The following tutorial will use GCP (Google Cloud Platform).
+
+**We will deploy a simple micro-service multiple time on one or more cloud VM and have a reverse proxy load balancing between them.**
 
 # Useful Tools and preliminary steps
 
@@ -40,4 +48,19 @@ If you rather want to use Windows as a terminal and work environment, that's up 
 
 
 > /!\ **- At the end of the course remember to deactivate billing and remove payment method. [Link to instructions](chapters/deactivate-gcp-billing.md)** /!\
+
+
+# Preparing the infrastructure
+
+## [Create a VM](chapters/create-vm.md)
+
+## [Access and prepare the VM](chapters/accces-prepare-VM.md)
+
+### [Allow HTTP traffic](chapters/allow-http.md)
+
+# Post course operations
+
+## [Deactivate GCP billing](chapters/deactivate-gcp-billing.md)
+
+
 
