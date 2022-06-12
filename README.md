@@ -23,12 +23,14 @@
     - [Install Git](#install-git)
     - [Install oh-my-zsh](#install-oh-my-zsh)
   - [Conclusion](#conclusion)
+- [Part 2 : Container deployment](#part-2--container-deployment)
+  - [Pull the code from GitHub and execute it](#pull-the-code-from-github-and-execute-it)
+  - [Access your deployment](#access-your-deployment)
 - [Troubleshooting](#troubleshooting)
   - [Manually allow HTTP traffic](#manually-allow-http-traffic)
-- [Allow HTTP on a GCP VM](#allow-http-on-a-gcp-vm)
 - [Post course operations](#post-course-operations)
   - [Deactivate GCP billing](#deactivate-gcp-billing)
-  - [Remove credit card informations](#remove-credit-card-informations)
+  - [Remove credit card information](#remove-credit-card-information)
 
 # About this repo
 
@@ -48,7 +50,7 @@ I suggest using VS Code as a work environment during this TD as it is light weig
 
 I will be using Linux as a work environment through WSL, a way to have access to a linux kernel on a Windows session.
 Feel free to use:
-- A dual boot with linux os installed
+- A dual boot with linux OS installed
 - A VM on your Windows with VMWare Player or Virtual Box
 - An already deployed Cloud VM
 - Your own WSL installation
@@ -274,22 +276,43 @@ If you've done everything well you should able to do the following command :
 # And have te following output :
 CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 ```
+# Part 2 : Container deployment
+
+## Pull the code from GitHub and execute it
+
+Everything needed for the TD is in the following repo [CNTD-application](https://github.com/Course-by-Neito/CNTD-application)
+
+First step is to clone the repo inside the VM by using git
+
+```sh
+git clone https://github.com/Course-by-Neito/CNTD-application
+# Then enter the folder 
+cd CNTD-application
+```
+
+Then we are going to spin up the containers : 
+
+```sh
+docker compose up -d 
+```
+
+## Access your deployment
+
+You now just have to access the public IP address of your VM to see the result
+
+docker will then pull the images and start them according to the [docker-compose.yml](https://github.com/Course-by-Neito/CNTD-application/blob/main/docker-compose.yml) file 
 
 # Troubleshooting
 
 ## Manually allow HTTP traffic
 
-# Allow HTTP on a GCP VM
-
 If you choose not to allow http traffic on VM creation you have to configure it through the VPC Network menu
 
-![reseau vpc](../images/reseau-vpc.jpg)
+![reseau vpc](./images/reseau-vpc.jpg)
 
 you have here the list of firewall rules created for your project. Go ahead and create a new one.
 
-![create rule](../images/create-fw-rule.jpg)
-
-#TODO 
+![create rule](./images/create-fw-rule.jpg)
 
 # Post course operations
 
@@ -298,15 +321,17 @@ you have here the list of firewall rules created for your project. Go ahead and 
 > [Here](https://cloud.google.com/billing/docs/how-to/modify-project?hl=fr#disable_billing_for_a_project) is the documentation to close billing on projects
 
 1. Type "Gestion des comptes" in the search bar to directly access the right page
-    ![Gestion des comptes](././images/gestion-des-comptes.jpg)
+    ![Gestion des comptes](./images/gestion-des-comptes.jpg)
 2. On the upper options bar you the "Fermer le compte de facturation" option
    - Follow the instruction and close billing  
    
     ![Fermer facturation](./images/cloture-compte-facturation.jpg)
 
-## Remove credit card informations
+## Remove credit card information
+
+> /!\ You cannot remove your credit card while you have a billing account activated
 
 1. Type "mode de paiement" in the search bar to directly access the right page
-   ![access payment methof page](./images/access-payment-method.jpg)
+   ![access payment method page](./images/access-payment-method.jpg)
 2. Locate your credit card delete it
 
