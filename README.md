@@ -26,8 +26,6 @@
 - [Part 2 : Container deployment](#part-2--container-deployment)
   - [Pull the code from GitHub and execute it](#pull-the-code-from-github-and-execute-it)
   - [Access your deployment](#access-your-deployment)
-- [Troubleshooting](#troubleshooting)
-  - [Manually allow HTTP traffic](#manually-allow-http-traffic)
 - [Post course operations](#post-course-operations)
   - [Deactivate GCP billing](#deactivate-gcp-billing)
   - [Remove credit card information](#remove-credit-card-information)
@@ -296,23 +294,13 @@ Then we are going to spin up the containers :
 docker compose up -d 
 ```
 
+docker will then pull the images and start them according to the [docker-compose.yml](https://github.com/Course-by-Neito/CNTD-application/blob/main/docker-compose.yml) configuration.
+
 ## Access your deployment
 
 You now just have to access the public IP address of your VM to see the result
 
-docker will then pull the images and start them according to the [docker-compose.yml](https://github.com/Course-by-Neito/CNTD-application/blob/main/docker-compose.yml) file 
 
-# Troubleshooting
-
-## Manually allow HTTP traffic
-
-If you choose not to allow http traffic on VM creation you have to configure it through the VPC Network menu
-
-![reseau vpc](./images/reseau-vpc.jpg)
-
-you have here the list of firewall rules created for your project. Go ahead and create a new one.
-
-![create rule](./images/create-fw-rule.jpg)
 
 # Post course operations
 
@@ -324,8 +312,7 @@ you have here the list of firewall rules created for your project. Go ahead and 
     ![Gestion des comptes](./images/gestion-des-comptes.jpg)
 2. On the upper options bar you the "Fermer le compte de facturation" option
    - Follow the instruction and close billing  
-   
-    ![Fermer facturation](./images/cloture-compte-facturation.jpg)
+     ![Fermer facturation](./images/cloture-compte-facturation.jpg)
 
 ## Remove credit card information
 
