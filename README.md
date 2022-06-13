@@ -185,7 +185,7 @@ Host cloud-tp # Here you can specify an alias for the connection
     IdentityFile C:\Users\willi\.ssh\cloud_key # the absolute path to the SSH private key
 ```
 
-> You can [find the IP address](accces-prepare-VM.md#accessing-the-vm) on the VM summary screen
+> You can [find the IP address](#accessing-the-vm) on the VM summary screen
 
 There will be an entry for each section in the config file on the REmote - SSH menu
 
